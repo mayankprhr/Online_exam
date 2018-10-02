@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminMaster.master.cs" Inherits="exam2.adminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<style>
+    #header {
+        color: #247BA0;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #nav {
+        background-color: #FF1654;
+        padding: 5px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li a {
+        color: #F1FAEE;
+        font-size: 30px;
+        column-width: 5%;
+    }
+
+    li {
+        display: inline;
+        padding-left: 2px;
+        column-width: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        margin-left: 20px;
+    }
+
+    li a:hover {
+        background-color: #F3FFBD;
+        color: #FF1654;
+        padding: 1%;
+    }
+
+    #side {
+        text-align: center;
+        float: center;
+        width: 15%;
+        padding-bottom: 79%;
+        background-color: #F1FAEE;
+    }
+
+    #article {
+        background-color: #EEF5DB;
+        padding: 10px;
+        padding-bottom: 75%;
+    }
+
+    #footer {
+        background-color: #C7EFCF;
+        text-align: center;
+        padding-bottom: 5%;
+        font-size: 20px;
+    }
+
+    #con {
+        border: double;
+        border-color: burlywood;
+    }
+
+    #header {
+        color: #247BA0;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #nav {
+        background-color: #FF1654;
+        padding: 5px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    li a {
+        color: #F1FAEE;
+        font-size: 30px;
+        column-width: 5%;
+    }
+
+    li {
+        display: inline;
+        padding-left: 2px;
+        column-width: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        margin-left: 20px;
+    }
+
+    .auto-style21 {
+        width: 100%;
+        height: 64px;
+        margin-top: 0px;
+    }
+
+    .auto-style23 {
+        width: 20%;
+        table-layout: fixed;
+    }
+
+        .auto-style23:hover {
+            background-color: #F3FFBD;
+            color: #FF1654;
+            
+        }
+         .imgdisp{
+            
+        border-radius:20px;       
+        }
+
+        .btnstyle {
+            border-radius: 15px;
+            background-color: transparent;
+            width:100%;
+        }
+</style>
+<body>
+    <form id="form1" runat="server">
+       <div>
+       <asp:Image ID="Image1" CssClass="imgdisp" runat="server" ImageUrl="~/Images/nathcorp.png"  Height="174px" Width="283px" />
+        <br />
+      </div>
+        <table class="auto-style21" style="background-color: #F0F0F0">
+            <tr>
+                <td class="auto-style23">
+                    <asp:Button ID="addquestn" runat="server" CssClass="btnstyle" Text="Add Questions" Font-Bold="False" Font-Names="helvetica,Arial" Font-Size="X-Large" Height="50px" OnClick="addquestn_Click" />
+                </td>
+                <td class="auto-style23">
+                    <asp:Button ID="viewquestn" runat="server" CssClass="btnstyle" Text="View Questions" Font-Bold="False" Font-Names="helvetica,Arial" Font-Size="X-Large" Height="50px" OnClick="viewquestn_Click" />
+                </td>
+                <td class="auto-style23">
+                    <asp:Button ID="viewrslt" runat="server" CssClass="btnstyle" Text="View Result" Font-Bold="False" Font-Names="helvetica,Arial" Font-Size="X-Large" Height="50px" OnClick="viewrslt_Click" />
+                </td>
+                <td class="auto-style23">
+                    <asp:Button ID="manageuser" runat="server" CssClass="btnstyle" Text="Manage Users" Font-Bold="False" Font-Names="helvetica,Arial" Font-Size="X-Large" Height="50px" OnClick="manageuser_Click" />
+                </td>
+                <td class="auto-style23">
+                    <asp:Button ID="logout" runat="server" CssClass="btnstyle" Text="Logout" Font-Bold="False" Font-Names="helvetica,Arial" Font-Size="X-Large" Height="50px" />
+                </td>
+            </tr>
+        </table>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
